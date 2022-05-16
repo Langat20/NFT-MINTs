@@ -1,4 +1,4 @@
-from app.urls import home
+from app.main.urls import home
 
 
 # Homepage View
