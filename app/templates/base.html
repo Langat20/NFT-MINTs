@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for( 'static', filename='css/style.css')}}">
+
+  <title>NFT MINTs</title>
+</head>
+<body>
+<!-- Display User Messages Start -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success alert-dismissible text-center fade show m-0" role="alert">
+        {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<!-- Display User Messages End -->
+
+  <!-- Navbar Start-->
+  {% block navbar %}
+  {% include 'navbar.html' %}
+  {% endblock %}
+  <!-- Navbar End -->
+  
+  <!-- Block For Inserting Content Start-->
+  {% block content %}{% endblock %}
+  <!-- Block For Inserting Content End -->
+
+
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{url_for('static', filename='js/jquery-3.6.0.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper-2.11.2.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
