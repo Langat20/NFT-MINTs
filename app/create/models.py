@@ -3,7 +3,8 @@ from datetime import datetime
 from app.auth.models import User
 
 
-class Nft(db.Model):
+class Nft(db.Model, User):
+    id = db.Column(db.Integer, primary_key=True)
     nft_path = db.Column(db.String, nullable=True, unique=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     title = db.Column(db.String, nullable=False)
