@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.header-section {
+  margin-top: -30px;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'Inter', sans-serif;
+}
+
+.header-section h2 {
+  font-weight: bolder;
+}
