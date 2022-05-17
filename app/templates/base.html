@@ -8,10 +8,14 @@
 
   <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{url_for( 'static', filename='css/styles.css')}}">
+  <link rel="stylesheet" href="{{url_for( 'static', filename='css/navbar.css')}}">
+  <link rel="stylesheet" href="{{url_for( 'static', filename='css/profile.css')}}">
+  <link rel="stylesheet" href="{{url_for( 'static', filename='css/footer.css')}}">
 
   <title>NFT MINTs</title>
 </head>
 <body>
+
 <!-- Display User Messages Start -->
 {% with messages = get_flashed_messages() %}
   {% if messages %}
@@ -38,12 +42,17 @@
   <!-- Block For Inserting Content End -->
 
 
+  <!-- Navbar Start-->
+  {% block footer %}
+  {% include 'footer.html' %}
+  {% endblock %}
+  <!-- Navbar End -->
  
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="{{url_for('static', filename='js/jquery-3.6.0.js')}}"></script>
-    <script src="{{url_for('static', filename='js/popper-2.11.2.js')}}"></script>
-    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
-    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="{{url_for('static', filename='js/jquery-3.6.0.js')}}"></script>
+  <script src="{{url_for('static', filename='js/popper-2.11.2.js')}}"></script>
+  <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
 </html>

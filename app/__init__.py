@@ -20,9 +20,10 @@ def create_app(config_environment):
     # login_manager.init_app(app)
 
     # Register blueprint
-    from app.main.urls import home, auth, user
+    from app.main.urls import home, auth, user, profile
     app.register_blueprint(home)
     app.register_blueprint(auth)
     app.register_blueprint(user)
+    app.register_blueprint(profile)
 
     return app

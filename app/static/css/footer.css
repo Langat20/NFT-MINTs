@@ -1,0 +1,85 @@
+/* Footer Section */
+.footer {
+  padding-top: 50px;
+  height: 460px;
+  background-color: black;
+  color: white;
+}
+
+.fab {
+  margin-top: 20px;
+  font-size: 30px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.fab:hover {
+    color: #b6d9ee;
+    text-decoration: none;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+}
+
+.footer p {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Subscribe Section */
+.newsletter {
+  padding: 40px;
+  border: 3px solid #0F689B;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.newsletter h5 {
+  font-weight: bold;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border: 1px solid white;
+  height: 40px;
+  margin-top: 20px;
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input::placeholder{
+  font-size: 15px;
+  text-indent: 15px;
+}
+
+.submit-btn {
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0F689B;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
