@@ -1,3 +1,4 @@
+from flask import render_template
 from app.main.urls import home
 
 
@@ -5,4 +6,5 @@ from app.main.urls import home
 @home.route('/')
 def index():
 
-    return "Hello World -- Home Page"
+    return render_template('home/index.html')
+
