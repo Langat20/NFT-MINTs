@@ -1,1 +1,144 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
+  <!--Stylesheets-->
+  <link rel="stylesheet" href="{{url_for( 'static', filename='css/bootstrap.min.css')}}">
+  <link rel="stylesheet" href="{{url_for( 'static', filename='css/styles.css')}}">
+
+  <title>Landing Page</title>
+</head>
+
+<body>
+  <!-- Navbar section -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="../static/images/logo.png" alt="Logo" />
+    </div>
+
+    <ul id="nav-btns">
+      <li><a class="link active" href="#">HOME</a></li>
+      <li><a class="link" href="{{url_for('explore.exploreNFTs')}}">EXPLORE</a></li>
+      <li><a class="link" href="#">CREATE</a></li>
+    </ul>
+
+    <div class="wallet">
+      <button class="login-btn"><a href="#">LOGIN</a></button>
+      <a href="#"><i class="fas fa-wallet"></i></a>
+    </div>
+
+  </header>
+
+  <!-- Intro Section -->
+  <div class="intro">
+    <div class="intro-txt">
+      <h2>Discover, Create or Sell <span class="purple-txt">DIGITAL ITEMS</span> </h2>
+      <p>Partner with one of the best retailers to showcase your brand and products</p>
+      <button class="explore-btn"><a href="{{url_for('explore.exploreNFTs')}}">EXPLORE</a></button>
+    </div>
+
+    <img src="../../static/images/home-img.png" alt="Home Background Image">
+  </div>
+
+  <!-- Middle Section -->
+  <div class="middle-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="title">
+            <a href="#"><i class="fas fa-wallet"></i></a>
+            <h5>SET UP YOUR WALLET</h5>
+          </div>
+          <p>Once you’ve set up your wallet of choice, connect it to NFT MINTs by clicking the wallet icon in the top
+            right corner.</p>
+        </div>
+
+        <div class="col-md-3">
+          <div class="title">
+            <a href="#"><i class="fas fa-upload"></i></a>
+            <h5>ADD YOUR NFTs</h5>
+          </div>
+          <p>Upload your work (image, video, audio, or 3D art), add a title and description, and customize your NFTs
+            with properties, stats, and unlockable content.</p>
+        </div>
+
+        <div class="col-md-3">
+          <div class="title">
+            <a href="#"><i class="fas fa-coins"></i></a>
+            <h5>LIST THEM FOR SALE</h5>
+          </div>
+          <p>Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to
+            sell your NFTs, and we help you sell them!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Products Section -->
+  <div class="top-products-section">
+    <h4>Top Products</h4>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 products">
+          <img src="../../static/images/feed-img.jpg" alt="NFT image">
+          <div class="feed-info">
+            <h4 class="title">Title</h4>
+            <p>Owned By:</p>
+            <p>Price</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 products">
+          <img src="../../static/images/feed-img.jpg" alt="NFT image">
+          <div class="feed-info">
+            <h4 class="title">Title</h4>
+            <p>Owned By:</p>
+            <p>Price</p>
+          </div>
+        </div>
+
+        <div class="col-md-3 products">
+          <img src="../../static/images/feed-img.jpg" alt="NFT image">
+          <div class="feed-info">
+            <h4 class="title">Title</h4>
+            <p>Owned By:</p>
+            <p>Price</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+
+    <div class="newsletter">
+      <h5>Subscribe To Our Newsletter </h5>
+      <form action="/subscription/subscribe" method="POST">
+        <input type="email" name="email" placeholder="Enter email to subscribe" required>
+        <button class="btn submit-btn" type="submit">SUBSCRIBE</button>
+      </form>
+    </div>
+
+    <div class="social">
+      <a href="#" class="fab fa-linkedin"></a>
+      <a href="https://github.com/BrianMwevi/NFT-MINTs.git" class="fab fa-github"></a>
+      <a href="#" class="fab fa-facebook"></a>
+    </div>
+    <p><span>&#169;</span> NFT-Mints 2022. All Rights Reserved.</p>
+
+  </div>
+
+  <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+
+</html>
