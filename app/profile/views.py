@@ -6,13 +6,14 @@ from .forms import ProfileForm
 from app import photos
 
 
-@user.route('profile/<string:user_id>/')
+@user.route('/<string:user_id>/details')
 def profile(user_id):
-    nfts = Nft.query.filter_by(user_id=user_id).first()
-    return render_template('profile.html', nfts=nfts)
+    # nfts = Nft.query.filter_by(user_id=user_id).first()
+    # return render_template('profile/profile.html', nfts=nfts)
+    return render_template('profile/profile.html')
 
 
-@user.route('profile/<string:user_id>/update/', methods=['POST'])
+@user.route('/<string:user_id>/update', methods=['POST'])
 def update_profile(user_id):
     profile_form = ProfileForm()
     if request.method == 'POST':
