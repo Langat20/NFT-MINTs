@@ -1,0 +1,165 @@
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #020824;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+h2,h3{
+  margin: 0;
+  color: #fff;
+}
+
+h2{
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 2em;
+  position: relative;
+  display: inline-block;
+}
+
+p, span{
+  margin: 0;
+  color: #eee;
+  font-size: 0.8em;
+  line-height: 30px;
+}
+
+ul{
+  list-style: none;
+  padding: 0;
+}
+
+section, footer{
+  margin: 8em 0;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.btn{
+  padding: 0.7em 2em;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+}
+
+.btn-primary{
+  background: linear-gradient(90deg, #48fc8b, #1de7ea);
+  color: #111;
+  border: none;
+}
+
+.btn-primary:hover{
+  background: #1de7ea;
+}
+
+.btn-group .btn{
+  margin: 1em;
+}
+
+.menu-btn{
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  color: #fff;
+  display: none;
+}
+
+.menu .btn-primary{
+  display: none;
+}
+
+.header-body div div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+
+}
+
+.header-body img{
+  margin-left: 500px;
+  margin-top: -300px;
+}
+
+.p
+
+
+h1{
+  font-size: 4.5em;
+}
+
+.header-body p{
+  max-width: 20em;
+  line-height: 23px;
+  font-size: 1.2em;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 10em 0 4em 0;
+}
+
+.services .card{
+  padding: 1em;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  background: rgba(127, 127, 127, 0.25);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: relative;
+}
+
+.services .card i{
+  color: white;
+}
+
+@media  screen and (max-width: 700px){
+  html{
+    font-size: 14px;
+  }
+
+  .header-body div div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-body p{
+    text-align: center !important;
+  }
+
+  .services .cards{
+    flex-direction: column;
+  }
+
+  .services .cards{
+    margin: 4em 0 1em 0;
+  }
+}
+
+@media  screen and (max-width: 950px){
+  .explore .cards{
+    flex-direction: column;
+  }
+}
