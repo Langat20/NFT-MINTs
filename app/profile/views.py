@@ -9,7 +9,7 @@ from app import photos
 @user.route('profile/<string:user_id>/')
 def profile(user_id):
     nfts = Nft.query.filter_by(user_id=user_id).first()
-    return render_template('profile.html', nfts=nfts)
+    return render_template('profile/profile.html', nfts=nfts)
 
 
 @user.route('profile/<string:user_id>/update/', methods=['POST'])
