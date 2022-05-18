@@ -11,3 +11,130 @@
 .header-section h2 {
   font-weight: bolder;
 }
+
+.layout {
+  background-color: #010125;
+  padding-bottom: 100px;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.profile-info img {
+  border-radius: 100%;
+  width: 120px;
+  height: 120px;
+  border: 2px solid white;
+}
+
+.profile-info p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.2;
+  color: white;
+}
+
+.username {
+  margin-top: 10px;
+}
+
+.email {
+  margin-top: -10px;
+}
+
+.profile-btns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+}
+
+.upload-btn {
+  width: 250px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #873095;
+  margin-bottom: 30px;
+}
+
+.upload-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.upload-btn a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.fav-btn {
+  width: 40px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0F689B;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.far {
+  margin-top: -10px;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Feed Section */
+.container {
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.row {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.col-md-3{
+  background-color: #39013E;
+  text-align: center;
+  color: white;
+  margin-left: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.col-md-3 img {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  border: 2px solid white;
+}
+
+.feed-info {
+  margin-top: 20px;
+}
+
+.feed-info p {
+  font-size: 14px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
