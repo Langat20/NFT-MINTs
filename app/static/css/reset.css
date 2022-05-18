@@ -1,0 +1,55 @@
+body{
+  background-color: #020824;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.reset-box{
+  width: 360px;
+  height: 620px;
+  border-radius: 3px;
+  background-color: white;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+  padding: 15px;
+}
+
+h4{
+  text-align: center;
+}
+
+form{
+  width: 300px;
+  margin-left: 20px;
+}
+
+form label{
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+form input{
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  outline: none;
+}
+
+input[type="button"]{
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: blue;
+  font-size: 18px;
+}
+
+p{
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
