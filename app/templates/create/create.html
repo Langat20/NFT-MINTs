@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Page</title>
+  <link rel="stylesheet" href="/app/static/css/create.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>CREATE</h1>
+    </div>
+    <div class="wrapper">
+      <div class="image">
+        <img src="" alt="">
+      </div>
+      <div class="content">
+        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <div class="text">No file chosen, yet !</div>
+      </div>
+      <div id="cancel-btn"><i class="fas fa-times"></i></div>
+      <div class="file-name">File Name here</div>
+    </div>
+    <input type="file" id="default-btn" hidden>
+    <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+    <div>
+      <form action="#" class="form">
+        <div class="title">
+          <label for="">Title</label>
+          <input type="text" name="title" required placeholder="eg-Crypto Funk" id="title">
+        </div>
+        <div class="category">
+          <label for="">Category</label>
+          <!-- <input type="category" name="category" id="email" required> -->
+          <select id="category">
+            <option value="category">Select Category</option>
+            <option value="sport">Sport</option>
+            <option value="music">Music</option>
+            <option value="game">Game</option>
+            <option value="photography">Photography</option>
+            <option value="domain">Domain</option>
+          </select>
+        </div>
+        <div class="description">
+          <label for="">Description</label>
+          <input type="text" name="description" id="description" required placeholder="eg-This is a limited item">
+        </div>
+        <div class="price">
+          <label for="">Price</label>
+          <input type="number" name="price" id="price" min="0.1" max="1000000" placeholder="Enter price for one item">
+        </div>
+        <div class="royalties">
+          <label for="">Royalties</label>
+          <input type="number" name="royalties" id="royalties" required placeholder="Enter amount in %">
+        </div>
+        <button class="btn">CREATE ITEM</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const defaultBtn = document.querySelector("#default-btn")
+    const customBtn = document.querySelector("#custom-btn")
+    function defaultBtnActive(){
+      defaultBtn.click();
+    }
+  </script>
+</body>
+</html>
