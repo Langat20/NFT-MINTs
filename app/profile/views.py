@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for, flash
-from app.create.models import Nft
+from app.nft.models import Nft
 from app.main.urls import user
 from app.auth.models import User
 from .forms import ProfileForm
