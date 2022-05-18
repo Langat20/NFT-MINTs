@@ -1,0 +1,108 @@
+body{
+  background-color: #020824;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1{
+  text-align: center;
+  padding-top: 15px;
+}
+
+h4{
+  text-align: center;
+}
+
+form{
+  width: 300px;
+  margin-left: 20px;
+}
+
+form label{
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+form input{
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+input[type="button"]{
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #020824;
+  color: white;
+  font-size: 18px;
+}
+
+p{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 15px;
+}
+
+.already{
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  margin-top: -10px;
+  margin-left: 750px;
+}
+
+.already a{
+  color: #49c1a2;
+}
+
+.header-body{
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+.signup-box{
+  width: 360px;
+  height: 620px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+  margin-left: 1000px;
+  margin-top: -580px;
+}
+
+.image{
+  margin-left: 150px;
+  margin-top: 200px;
+}
+
+.front{
+  color: white;
+  margin-right: 1000px;
+}
+
+.front p{
+  font-size: xx-large;
+}
+
+.front-1{
+  color: blue;
+  margin-right: 1000px;
+}
+
+.front-1 p{
+  font-size: xx-large;
+}
+
+.front-2{
+  color: white;
+  margin-right: 1000px;
+}
+
+.front-2 p{
+  font-size: larger;
+}
