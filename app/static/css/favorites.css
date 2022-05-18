@@ -1,0 +1,84 @@
+.header-section {
+  margin-top: -30px;
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  font-family: 'Inter', sans-serif;
+}
+
+.header-section h2 {
+  font-weight: bolder;
+}
+
+.layout {
+  background-color: #010125;
+  padding-bottom: 20px;
+}
+
+.container {
+  height: 100%;
+  background-color: transparent;
+  border-radius: 0px;
+}
+
+.row {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.col-md-3{
+  background-color: white;
+  color: black;
+  text-align: left;
+  margin-left: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  max-width: 400px !important;
+}
+
+.col-md-3 img {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  border: 2px solid black;
+}
+
+.feed-info {
+  margin-top: 20px;
+}
+
+.feed-info p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buy-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #873095;
+  margin-bottom: 30px;
+}
+
+.buy-btn a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.buy-btn a:visited {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
