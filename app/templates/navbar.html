@@ -1,11 +1,11 @@
 <!-- Navbar section -->
 <div class="nav-background">
-  <img src="../static/images/nav-img.jpg" alt="Logo" />
+  <img src="{{url_for('static', filename='images/nav-img.jpg')}}" alt="Logo" />
 </div>
 
 <header class="navbar">
   <div class="logo">
-    <img src="../static/images/logo.png" alt="Logo" />
+    <a href="{{ url_for('home.index')}}"><img src="{{url_for('static', filename='images/logo.png')}}" alt="Logo" /></a>
   </div>
 
   <ul id="nav-btns">
