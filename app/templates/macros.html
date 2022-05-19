@@ -2,12 +2,29 @@
   {% for nft in nfts %}
     <div class="col-md-3">
         <i class="fas fa-heart"></i>
-        <img src="{{url_for('static', filename='images/feed-img.jpg')}}" alt="NFT image">
+        <img src="{{url_for('static', filename='images/feed-img.jpg')}}" height="200px" alt="NFT image">
         <div class="feed-info">
           <h4 class="title">{{nft.title}}</h4>
+          <p>Description: {{nft.description | truncate(50)}}</p>
           <p>Owned By: {{nft.user|title}}</p>
           <p>Price: Ksh {{nft.price}}</p>
           <button class="buy-btn"><a href="#">Buy Now</a></button>
+        </div>
+      </div>
+  {% endfor %}
+{% endmacro %}
+
+{% macro display_top_nfts(nfts) %}
+  {% for nft in nfts %}
+    <div class="col-md-3 products">
+        <i class="fas fa-heart"></i>
+        <img src="{{url_for('static', filename='images/feed-img.jpg')}}" height="100px" alt="NFT image">
+        <div class="feed-info">
+          <h4 class="title">{{nft.title}}</h4>
+          <p>Description: {{nft.description | truncate(50)}}</p>
+          <p>Owned By: {{nft.user|title}}</p>
+          <p>Price: Ksh {{nft.price}}</p>
+          <a class="btn btn-outline-info ml-3" href="#">Buy Now</a>
         </div>
       </div>
   {% endfor %}
