@@ -3,7 +3,7 @@ from app.main.urls import explore
 from app.nft.models import Nft
 
 
-@explore.route('/explore-nfts/<string:category>/')
+@explore.route('/<string:category>/')
 def explore_nfts(category):
     category.lower()
     if category == 'all':
