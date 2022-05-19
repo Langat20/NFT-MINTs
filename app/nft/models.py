@@ -8,6 +8,7 @@ class Nft(db.Model):
     nft_path = db.Column(db.String, nullable=True, unique=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     title = db.Column(db.String, nullable=False)
+    category = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text, nullable=False)
     price = db.Column(db.Float, nullable=False)
     royalties = db.Column(db.Integer, nullable=False)
