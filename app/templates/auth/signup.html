@@ -31,20 +31,21 @@
       <div class="col-md-6">
         <h2>SIGN UP</h2>
 
-        <form action="" method="POST">
-          <label for="username">Username</label>
-          <input type="text" name="username" required>
+        <form action="{{url_for('auth.signup')}}" method="POST">
+          {{ signup_form.csrf_token}}
+          {{ signup_form.username.label}}
+          {{signup_form.username}}
 
-          <label for="email">Email Address</label>
-          <input type="email" name="email" required>
+          {{signup_form.email.label}}
+          {{ signup_form.email}}
 
-          <label for="password">Password</label>
-          <input type="password" name="password" required>
-
-          <label for="password">Confirm Password</label>
-          <input type="password" name="password" required>
-
-          <button class="submit-btn" type="submit"><a href="#">SIGNUP</a></button>
+          {{signup_form.password.label}}
+          {{signup_form.password}}    
+                
+          {{signup_form.confirm_password.label}}
+          {{signup_form.confirm_password}}
+    
+          {{signup_form.submit(class='submit-btn')}}
         </form>
 
         <p> Already have an account? <strong><a href="{{url_for('auth.login')}}">LOGIN</a></strong></p>
