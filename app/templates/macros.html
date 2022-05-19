@@ -1,0 +1,14 @@
+{% macro display_nfts(nfts) %}
+  {% for nft in nfts %}
+    <div class="col-md-3">
+        <i class="fas fa-heart"></i>
+        <img src="{{url_for('static', filename='images/feed-img.jpg')}}" alt="NFT image">
+        <div class="feed-info">
+          <h4 class="title">{{nft.title}}</h4>
+          <p>Owned By: {{nft.user|title}}</p>
+          <p>Price: Ksh {{nft.price}}</p>
+          <button class="buy-btn"><a href="#">Buy Now</a></button>
+        </div>
+      </div>
+  {% endfor %}
+{% endmacro %}

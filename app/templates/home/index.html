@@ -26,7 +26,7 @@
 
     <ul id="nav-btns">
       <li><a class="link active" href="#">HOME</a></li>
-      <li><a class="link" href="{{url_for('explore.exploreNFTs')}}">EXPLORE</a></li>
+      <li><a class="link" href="{{url_for('explore.explore_nfts', category='all')}}">EXPLORE</a></li>
       <li><a class="link" href="#">CREATE</a></li>
     </ul>
 
@@ -42,7 +42,7 @@
     <div class="intro-txt">
       <h2>Discover, Create or Sell <span class="purple-txt">DIGITAL ITEMS</span> </h2>
       <p>Partner with one of the best retailers to showcase your brand and products</p>
-      <button class="explore-btn"><a href="{{url_for('explore.exploreNFTs')}}">EXPLORE</a></button>
+      <button class="explore-btn"><a href="{{url_for('explore.explore_nfts', category='all')}}">EXPLORE</a></button>
     </div>
 
     <img src="../../static/images/home-img.png" alt="Home Background Image">
