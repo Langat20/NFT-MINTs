@@ -5,9 +5,8 @@ from app.nft.models import Nft
 
 @explore.route('/explore-nfts/<string:category>/')
 def explore_nfts(category):
-    category = category.upper()
-    print(category)
-    if category == 'ALL':
+    category.lower()
+    if category == 'all':
         nfts = Nft.query.order_by(Nft.created_at).all()
 
     else:
