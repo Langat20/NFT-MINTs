@@ -26,13 +26,19 @@
 
     <ul id="nav-btns">
       <li><a class="link active" href="#">HOME</a></li>
-      <li><a class="link" href="{{url_for('explore.exploreNFTs')}}">EXPLORE</a></li>
+      <li><a class="link" href="{{url_for('explore.explore_nfts', category='all')}}">EXPLORE</a></li>
       <li><a class="link" href="#">CREATE</a></li>
     </ul>
 
     <div class="wallet">
-      <button class="login-btn"><a href="{{url_for('auth.login')}}">LOGIN</a></button>
-      <a href="#"><i class="fas fa-wallet"></i></a>
+      
+    {% if current_user.is_authenticated %}
+    <a class="btn btn-outline-light" href="{{ url_for('auth.logout') }}">LOGOUT</a>
+    <!-- <a href="#"><i class="fas fa-wallet fa-1x"></i></a> -->
+    {% else %}
+    <a class="btn btn-outline-info mx-2" href="{{url_for('auth.login')}}">LOGIN</a>
+    <a class="btn btn-outline-light mx-2" href="{{url_for('auth.signup')}}">SIGNUP</a>
+    {% endif %}
     </div>
 
   </header>
@@ -42,7 +48,7 @@
     <div class="intro-txt">
       <h2>Discover, Create or Sell <span class="purple-txt">DIGITAL ITEMS</span> </h2>
       <p>Partner with one of the best retailers to showcase your brand and products</p>
-      <button class="explore-btn"><a href="{{url_for('explore.exploreNFTs')}}">EXPLORE</a></button>
+      <button class="explore-btn"><a href="{{url_for('explore.explore_nfts', category='all')}}">EXPLORE</a></button>
     </div>
 
     <img src="../../static/images/home-img.png" alt="Home Background Image">
@@ -87,33 +93,9 @@
     <h4>Top Products</h4>
 
     <div class="container">
+      {% import 'macros.html' as macro %}
       <div class="row">
-        <div class="col-md-3 products">
-          <img src="../../static/images/feed-img.jpg" alt="NFT image">
-          <div class="feed-info">
-            <h4 class="title">Title</h4>
-            <p>Owned By:</p>
-            <p>Price</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 products">
-          <img src="../../static/images/feed-img.jpg" alt="NFT image">
-          <div class="feed-info">
-            <h4 class="title">Title</h4>
-            <p>Owned By:</p>
-            <p>Price</p>
-          </div>
-        </div>
-
-        <div class="col-md-3 products">
-          <img src="../../static/images/feed-img.jpg" alt="NFT image">
-          <div class="feed-info">
-            <h4 class="title">Title</h4>
-            <p>Owned By:</p>
-            <p>Price</p>
-          </div>
-        </div>
+        {{macro.display_top_nfts(nfts)}}
       </div>
     </div>
   </div>
