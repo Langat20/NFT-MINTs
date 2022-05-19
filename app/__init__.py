@@ -6,9 +6,9 @@ from flask_uploads import UploadSet, configure_uploads, IMAGES
 
 
 db = SQLAlchemy()
-# login_manager = LoginManager()
-# login_manager.session_protection = 'strong'
-# login_manager.login_view = 'auth.login'
+login_manager = LoginManager()
+login_manager.session_protection = 'strong'
+login_manager.login_view = 'auth.login'
 photos = UploadSet('photos', IMAGES)
 
 
@@ -17,7 +17,7 @@ def create_app(config_environment):
     app.config.from_object(config_options[config_environment])
     db.init_app(app)
     configure_uploads(app, photos)
-    # login_manager.init_app(app)
+    login_manager.init_app(app)
 
     # Register blueprint
     from app.main.urls import home, auth, user, profile, favorites,subscription,explore
